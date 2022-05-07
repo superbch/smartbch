@@ -1,4 +1,4 @@
-# Full node client of smartBCH
+# Full node client of SuperBCH
 
 This repository contains the code of the full node client of smartBCH, an EVM&amp;Web3 compatible sidechain for Bitcoin Cash.
 
