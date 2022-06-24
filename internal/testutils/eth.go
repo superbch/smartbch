@@ -6,7 +6,7 @@ import (
 
 	gethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	"github.com/smartbch/smartbch/internal/ethutils"
+	"github.com/superbch/superbch/internal/ethutils"
 )
 
 func MustEncodeTx(tx *gethtypes.Transaction) []byte {

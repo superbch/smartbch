@@ -6,7 +6,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartbch/smartbch/internal/testutils"
+	"github.com/superbch/superbch/internal/testutils"
 )
 
 // testdata/sol/contracts/erc20/MyERC20.sol

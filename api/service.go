@@ -11,10 +11,10 @@ import (
 	"github.com/ethereum/go-ethereum/event"
 	"github.com/ethereum/go-ethereum/rpc"
 
-	motypes "github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/app"
-	cctypes "github.com/smartbch/smartbch/crosschain/types"
-	"github.com/smartbch/smartbch/staking/types"
+	motypes "github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/app"
+	cctypes "github.com/superbch/superbch/crosschain/types"
+	"github.com/superbch/superbch/staking/types"
 )
 
 type CallDetail struct {

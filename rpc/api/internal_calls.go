@@ -6,7 +6,7 @@ import (
 
 	gethcmn "github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
-	motypes "github.com/smartbch/moeingevm/types"
+	motypes "github.com/superbch/moeingevm/types"
 )
 
 const (

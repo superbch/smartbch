@@ -12,17 +12,17 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/tendermint/tendermint/libs/log"
 
-	cctypes "github.com/smartbch/smartbch/crosschain/types"
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
-	"github.com/smartbch/smartbch/watcher/types"
+	cctypes "github.com/superbch/superbch/crosschain/types"
+	stakingtypes "github.com/superbch/superbch/staking/types"
+	"github.com/superbch/superbch/watcher/types"
 )
 
 const (
-	ReqStrBlockCount = `{"jsonrpc": "1.0", "id":"smartbch", "method": "getblockcount", "params": [] }`
-	ReqStrBlockHash  = `{"jsonrpc": "1.0", "id":"smartbch", "method": "getblockhash", "params": [%d] }`
+	ReqStrBlockCount = `{"jsonrpc": "1.0", "id":"superbch", "method": "getblockcount", "params": [] }`
+	ReqStrBlockHash  = `{"jsonrpc": "1.0", "id":"superbch", "method": "getblockhash", "params": [%d] }`
 	//verbose = 2, show all txs rawdata
-	ReqStrBlock    = `{"jsonrpc": "1.0", "id":"smartbch", "method": "getblock", "params": ["%s",2] }`
-	ReqStrTx       = `{"jsonrpc": "1.0", "id":"smartbch", "method": "getrawtransaction", "params": ["%s", true, "%s"] }`
+	ReqStrBlock    = `{"jsonrpc": "1.0", "id":"superbch", "method": "getblock", "params": ["%s",2] }`
+	ReqStrTx       = `{"jsonrpc": "1.0", "id":"superbch", "method": "getrawtransaction", "params": ["%s", true, "%s"] }`
 	ReqStrEpochs   = `{"jsonrpc": "2.0", "method": "sbch_getEpochs", "params": ["%s","%s"], "id":1}`
 	ReqStrCCEpochs = `{"jsonrpc": "2.0", "method": "sbch_getCCEpochs", "params": ["%s","%s"], "id":1}`
 )
@@ -263,18 +263,18 @@ func (client *RpcClient) getTx(hash string, blockhash string) (*types.TxInfo, er
 	return &txInfoResp.Result, nil
 }
 
-type smartBchJsonrpcError struct {
+type superBchJsonrpcError struct {
 	Code    int         `json:"code"`
 	Message string      `json:"message"`
 	Data    interface{} `json:"data,omitempty"`
 }
 
-type smartBchJsonrpcMessage struct {
+type superBchJsonrpcMessage struct {
 	Version string                `json:"jsonrpc,omitempty"`
 	ID      json.RawMessage       `json:"id,omitempty"`
 	Method  string                `json:"method,omitempty"`
 	Params  json.RawMessage       `json:"params,omitempty"`
-	Error   *smartBchJsonrpcError `json:"error,omitempty"`
+	Error   *superBchJsonrpcError `json:"error,omitempty"`
 	Result  json.RawMessage       `json:"result,omitempty"`
 }
 
@@ -284,7 +284,7 @@ func (client *RpcClient) getEpochs(start, end uint64) []*stakingtypes.Epoch {
 	if client.err != nil {
 		return nil
 	}
-	var m smartBchJsonrpcMessage
+	var m superBchJsonrpcMessage
 	client.err = json.Unmarshal(respData, &m)
 	if client.err != nil {
 		return nil
@@ -303,7 +303,7 @@ func (client *RpcClient) GetCCEpochs(start, end uint64) []*cctypes.CCEpoch {
 	if client.err != nil {
 		return nil
 	}
-	var m smartBchJsonrpcMessage
+	var m superBchJsonrpcMessage
 	client.err = json.Unmarshal(respData, &m)
 	if client.err != nil {
 		return nil

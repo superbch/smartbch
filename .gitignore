@@ -6,7 +6,7 @@
 *.dylib
 *.o
 *.a
-smartbchd
+superbchd
 
 # Test binary, built with `go test -c`
 *.test
@@ -28,7 +28,7 @@ rpc/api/testdbdata
 node_modules/
 staking/showopreturn/showopreturn
 staking/mocknode/mocknode
-cmd/smartbchd/smartbchd
+cmd/superbchd/superbchd
 
 private/
 app/stresstest/stresstest

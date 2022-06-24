@@ -8,9 +8,9 @@ import (
 
 	"github.com/holiman/uint256"
 
-	mevmtypes "github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/param"
-	"github.com/smartbch/smartbch/staking/types"
+	mevmtypes "github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/param"
+	"github.com/superbch/superbch/staking/types"
 )
 
 var (

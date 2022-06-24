@@ -11,9 +11,9 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	gethrpc "github.com/ethereum/go-ethereum/rpc"
 
-	motypes "github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/internal/testutils"
-	rpctypes "github.com/smartbch/smartbch/rpc/internal/ethapi"
+	motypes "github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/internal/testutils"
+	rpctypes "github.com/superbch/superbch/rpc/internal/ethapi"
 )
 
 var (

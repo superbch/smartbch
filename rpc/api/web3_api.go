@@ -8,7 +8,7 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/smartbch/smartbch/app"
+	"github.com/superbch/superbch/app"
 )
 
 var _ PublicWeb3API = (*web3API)(nil)

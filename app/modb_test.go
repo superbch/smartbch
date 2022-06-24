@@ -8,8 +8,8 @@ import (
 
 	gethcmn "github.com/ethereum/go-ethereum/common"
 
-	"github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/internal/testutils"
+	"github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/internal/testutils"
 )
 
 func filterFunc(addr gethcmn.Address, topics []gethcmn.Hash, addrList []gethcmn.Address, topicsList [][]gethcmn.Hash) (ok bool) {

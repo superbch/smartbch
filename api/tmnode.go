@@ -12,7 +12,7 @@ import (
 	"github.com/tendermint/tendermint/node"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/smartbch/smartbch/app"
+	"github.com/superbch/superbch/app"
 )
 
 /*-----------------------tendermint info----------------------------*/

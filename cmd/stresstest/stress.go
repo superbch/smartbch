@@ -21,13 +21,13 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	"github.com/smartbch/moeingads/indextree"
-	"github.com/smartbch/smartbch/app"
-	"github.com/smartbch/smartbch/internal/bigutils"
-	"github.com/smartbch/smartbch/internal/ethutils"
-	"github.com/smartbch/smartbch/internal/testutils"
-	"github.com/smartbch/smartbch/param"
-	"github.com/smartbch/smartbch/staking"
+	"github.com/superbch/moeingads/indextree"
+	"github.com/superbch/superbch/app"
+	"github.com/superbch/superbch/internal/bigutils"
+	"github.com/superbch/superbch/internal/ethutils"
+	"github.com/superbch/superbch/internal/testutils"
+	"github.com/superbch/superbch/param"
+	"github.com/superbch/superbch/staking"
 )
 
 type RocksDB = indextree.RocksDB

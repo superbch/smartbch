@@ -71,7 +71,7 @@ func runConfigCmd(cmd *cobra.Command, args []string) error {
 		}
 	} else /*update app.toml*/ {
 		switch key {
-		case "mainnet-rpc-url", "mainnet-rpc-username", "mainnet-rpc-password", "smartbch-rpc-url":
+		case "mainnet-rpc-url", "mainnet-rpc-username", "mainnet-rpc-password", "superbch-rpc-url":
 			tree.Set(key, value)
 
 		case "watcher-speedup", "use_litedb", "log-validators":

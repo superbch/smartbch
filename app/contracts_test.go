@@ -13,8 +13,8 @@ import (
 	gethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/holiman/uint256"
 
-	"github.com/smartbch/smartbch/internal/ethutils"
-	"github.com/smartbch/smartbch/internal/testutils"
+	"github.com/superbch/superbch/internal/ethutils"
+	"github.com/superbch/superbch/internal/testutils"
 )
 
 func TestDeployContract(t *testing.T) {

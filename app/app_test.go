@@ -18,12 +18,12 @@ import (
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/crypto/ed25519"
 
-	"github.com/smartbch/moeingevm/ebp"
-	"github.com/smartbch/smartbch/app"
-	"github.com/smartbch/smartbch/internal/ethutils"
-	"github.com/smartbch/smartbch/internal/testutils"
-	"github.com/smartbch/smartbch/param"
-	"github.com/smartbch/smartbch/staking"
+	"github.com/superbch/moeingevm/ebp"
+	"github.com/superbch/superbch/app"
+	"github.com/superbch/superbch/internal/ethutils"
+	"github.com/superbch/superbch/internal/testutils"
+	"github.com/superbch/superbch/param"
+	"github.com/superbch/superbch/staking"
 )
 
 //func TestMain(m *testing.M) {

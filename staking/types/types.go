@@ -7,7 +7,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/holiman/uint256"
-	"github.com/smartbch/smartbch/param"
+	"github.com/superbch/superbch/param"
 )
 
 //go:generate msgp
@@ -67,7 +67,7 @@ type Epoch struct {
 }
 
 type Validator struct {
-	Address      [20]byte `msgp:"address"`   // Validator's address in smartbch chain
+	Address      [20]byte `msgp:"address"`   // Validator's address in superbch chain
 	Pubkey       [32]byte `msgp:"pubkey"`    // Validator's pubkey for tendermint
 	RewardTo     [20]byte `msgp:"reward_to"` // where validator's reward goes into
 	VotingPower  int64    `msgp:"voting_power"`
@@ -78,7 +78,7 @@ type Validator struct {
 
 // Because EpochCountBeforeRewardMature >= 1, some rewards will be pending for a while before mature
 type PendingReward struct {
-	Address  [20]byte `msgp:"address"`   // Validator's operator address in smartbch chain
+	Address  [20]byte `msgp:"address"`   // Validator's operator address in superbch chain
 	EpochNum int64    `msgp:"epoch_num"` // During which epoch were the rewards got?
 	Amount   [32]byte `msgp:"amount"`    // amount of rewards
 }

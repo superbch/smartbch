@@ -4,9 +4,9 @@ import (
 	"github.com/holiman/uint256"
 	"github.com/tendermint/tendermint/libs/log"
 
-	modbtypes "github.com/smartbch/moeingdb/types"
-	moevmtc "github.com/smartbch/moeingevm/evmwrap/testcase"
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
+	modbtypes "github.com/superbch/moeingdb/types"
+	moevmtc "github.com/superbch/moeingevm/evmwrap/testcase"
+	stakingtypes "github.com/superbch/superbch/staking/types"
 )
 
 func (app *App) Logger() log.Logger {

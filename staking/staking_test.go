@@ -12,10 +12,10 @@ import (
 	"github.com/holiman/uint256"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/internal/testutils"
-	"github.com/smartbch/smartbch/staking"
-	types2 "github.com/smartbch/smartbch/staking/types"
+	"github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/internal/testutils"
+	"github.com/superbch/superbch/staking"
+	types2 "github.com/superbch/superbch/staking/types"
 )
 
 type callEntry struct {

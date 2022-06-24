@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"strings"
 
-	cctypes "github.com/smartbch/smartbch/crosschain/types"
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
+	cctypes "github.com/superbch/superbch/crosschain/types"
+	stakingtypes "github.com/superbch/superbch/staking/types"
 )
 
 const (

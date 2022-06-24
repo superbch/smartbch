@@ -31,18 +31,18 @@ ENV LD_LIBRARY_PATH=$ROCKSDB_PATH
 
 RUN mkdir /smart_bch
 WORKDIR /smart_bch
-RUN git clone https://github.com/smartbch/moeingevm.git
-RUN git clone https://github.com/smartbch/smartbch.git
+RUN git clone https://github.com/superbch/moeingevm.git
+RUN git clone https://github.com/superbch/superbch.git
 
 WORKDIR /smart_bch/moeingevm/evmwrap
 RUN make
 
 ENV EVMWRAP=/smart_bch/moeingevm/evmwrap/host_bridge/libevmwrap.so
 
-WORKDIR /smart_bch/smartbch
-RUN go install -tags cppbtree github.com/smartbch/smartbch/cmd/smartbchd
+WORKDIR /smart_bch/superbch
+RUN go install -tags cppbtree github.com/superbch/superbch/cmd/superbchd
 
-VOLUME ["/root/.smartbchd"]
+VOLUME ["/root/.superbchd"]
 
-ENTRYPOINT ["smartbchd"]
+ENTRYPOINT ["superbchd"]
 EXPOSE 8545 8546

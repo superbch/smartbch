@@ -13,7 +13,7 @@ import (
 	gethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/gorilla/websocket"
 
-	"github.com/smartbch/smartbch/internal/ethutils"
+	"github.com/superbch/superbch/internal/ethutils"
 )
 
 const (

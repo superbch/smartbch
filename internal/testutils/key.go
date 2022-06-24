@@ -11,7 +11,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	gethcore "github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/smartbch/smartbch/internal/ethutils"
+	"github.com/superbch/superbch/internal/ethutils"
 )
 
 func HexPrivKeyToAddr(keyHex string) common.Address {

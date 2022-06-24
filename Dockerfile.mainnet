@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 MAINTAINER Josh Ellithorpe <quest@mac.com>
 
-ARG SMARTBCH_VERSION="v0.4.4"
+ARG SUPERBCH_VERSION="v0.4.4"
 ARG MOEINGEVM_VERSION="v0.4.2"
 ARG CONFIG_VERSION="v0.0.6"
 
@@ -31,7 +31,7 @@ ENV GOPATH=/go
 ENV PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Patch Go for larger cgo stack size
-RUN wget https://github.com/smartbch/patch-cgo-for-golang/archive/refs/tags/v${PATCH_CGO_VERSION}.tar.gz
+RUN wget https://github.com/superbch/patch-cgo-for-golang/archive/refs/tags/v${PATCH_CGO_VERSION}.tar.gz
 RUN tar zxvf v${PATCH_CGO_VERSION}.tar.gz
 RUN rm v${PATCH_CGO_VERSION}.tar.gz
 RUN cd patch-cgo-for-golang-${PATCH_CGO_VERSION} && cp *.c $GOROOT/src/runtime/cgo/
@@ -46,37 +46,37 @@ RUN cd snappy-${SNAPPY_VERSION} && mkdir build && cd build && \
 RUN wget https://github.com/facebook/rocksdb/archive/refs/tags/v${ROCKSDB_VERSION}.tar.gz
 RUN tar zxvf v${ROCKSDB_VERSION}.tar.gz
 RUN cd rocksdb-${ROCKSDB_VERSION} && \
-    wget -O - https://raw.githubusercontent.com/smartbch/artifacts/main/patches/rocksdb.gcc11.patch | git apply -v && \
+    wget -O - https://raw.githubusercontent.com/superbch/artifacts/main/patches/rocksdb.gcc11.patch | git apply -v && \
     CXXFLAGS=-Wno-range-loop-construct make -j4 CC=gcc CXX=g++ static_lib
 
-# Create smartbch directory
+# Create superbch directory
 RUN mkdir /smart_bch
 WORKDIR /smart_bch
 
 # Build libevmwrap
-RUN git clone -b ${MOEINGEVM_VERSION} --depth 1 https://github.com/smartbch/moeingevm
+RUN git clone -b ${MOEINGEVM_VERSION} --depth 1 https://github.com/superbch/moeingevm
 RUN cd moeingevm/evmwrap && make
 
-# Build smartbchd
+# Build superbchd
 ENV ROCKSDB_PATH="/build/rocksdb-${ROCKSDB_VERSION}"
 ENV CGO_CFLAGS="-I$ROCKSDB_PATH/include"
 ENV CGO_LDFLAGS="-L$ROCKSDB_PATH -L/smart_bch/moeingevm/evmwrap/host_bridge/ -l:librocksdb.a -lstdc++ -lm -lsnappy"
 RUN cd /smart_bch
-RUN git clone -b ${SMARTBCH_VERSION} --depth 1 https://github.com/smartbch/smartbch
-RUN cd smartbch && go build -tags cppbtree github.com/smartbch/smartbch/cmd/smartbchd
+RUN git clone -b ${SUPERBCH_VERSION} --depth 1 https://github.com/superbch/superbch
+RUN cd superbch && go build -tags cppbtree github.com/superbch/superbch/cmd/superbchd
 
-# Setup smartbchd
-RUN cp /smart_bch/smartbch/smartbchd /build/smartbchd
+# Setup superbchd
+RUN cp /smart_bch/superbch/superbchd /build/superbchd
 WORKDIR /root
-RUN /build/smartbchd init mynode --chain-id 0x2710
-RUN wget https://github.com/smartbch/artifacts/releases/download/${CONFIG_VERSION}/dot.smartbchd.tgz
-RUN tar zxvf dot.smartbchd.tgz
-RUN cp -rf dot.smartbchd/* .smartbchd/
+RUN /build/superbchd init mynode --chain-id 0x2710
+RUN wget https://github.com/superbch/artifacts/releases/download/${CONFIG_VERSION}/dot.superbchd.tgz
+RUN tar zxvf dot.superbchd.tgz
+RUN cp -rf dot.superbchd/* .superbchd/
 
 # Go back to main workdir.
 WORKDIR /build
 
-VOLUME ["/root/.smartbchd"]
+VOLUME ["/root/.superbchd"]
 
-ENTRYPOINT ["./smartbchd"]
+ENTRYPOINT ["./superbchd"]
 EXPOSE 8545 8546

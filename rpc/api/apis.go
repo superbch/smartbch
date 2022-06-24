@@ -4,8 +4,8 @@ import (
 	"github.com/ethereum/go-ethereum/rpc"
 	"github.com/tendermint/tendermint/libs/log"
 
-	sbchapi "github.com/smartbch/smartbch/api"
-	"github.com/smartbch/smartbch/rpc/api/filters"
+	sbchapi "github.com/superbch/superbch/api"
+	"github.com/superbch/superbch/rpc/api/filters"
 )
 
 const (

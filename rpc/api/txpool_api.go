@@ -4,7 +4,7 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/tendermint/tendermint/libs/log"
 
-	rpctypes "github.com/smartbch/smartbch/rpc/internal/ethapi"
+	rpctypes "github.com/superbch/superbch/rpc/internal/ethapi"
 )
 
 var _ PublicTxPoolAPI = (*txPoolAPI)(nil)

@@ -51,10 +51,10 @@ mainnet-rpc-username = "{{ .MainnetRPCUsername }}"
 # BCH mainnet rpc password
 mainnet-rpc-password = "{{ .MainnetRPCPassword }}"
 
-# smartBCH rpc url for epoch get
-smartbch-rpc-url = "{{ .SmartBchRPCUrl }}"
+# superBCH rpc url for epoch get
+superbch-rpc-url = "{{ .SuperBchRPCUrl }}"
 
-# open epoch get to speedup mainnet block catch, work with "smartbch_rpc_url"
+# open epoch get to speedup mainnet block catch, work with "superbch_rpc_url"
 watcher-speedup = {{ .Speedup }}
 `
 

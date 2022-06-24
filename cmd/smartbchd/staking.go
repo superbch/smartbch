@@ -14,9 +14,9 @@ import (
 	gethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/tendermint/tendermint/libs/cli"
 
-	"github.com/smartbch/smartbch/internal/bigutils"
-	"github.com/smartbch/smartbch/internal/ethutils"
-	"github.com/smartbch/smartbch/staking"
+	"github.com/superbch/superbch/internal/bigutils"
+	"github.com/superbch/superbch/internal/ethutils"
+	"github.com/superbch/superbch/staking"
 )
 
 const (
@@ -35,7 +35,7 @@ func StakingCmd(ctx *Context) *cobra.Command {
 		Use:   "staking",
 		Short: "call staking contract method",
 		Example: `
-smartbchd staking \
+superbchd staking \
 --validator-key=07427a59913df1ae8af709f60f536ddba122b0afa8908291471ca58c603a7447 \
 --consensus-pubkey=f7847ca2afd06fedcd2c404c6e99db4d5475e0746154a550fe72990657675dc9 \
 --staking-coin=10000000000000 \

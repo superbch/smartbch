@@ -7,8 +7,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/smartbch/smartbch/app"
-	"github.com/smartbch/smartbch/param"
+	"github.com/superbch/superbch/app"
+	"github.com/superbch/superbch/param"
 )
 
 func VersionCmd() *cobra.Command {

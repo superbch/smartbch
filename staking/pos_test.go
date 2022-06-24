@@ -7,10 +7,10 @@ import (
 	"github.com/holiman/uint256"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartbch/smartbch/internal/ethutils"
-	"github.com/smartbch/smartbch/internal/testutils"
-	"github.com/smartbch/smartbch/staking"
-	"github.com/smartbch/smartbch/staking/types"
+	"github.com/superbch/superbch/internal/ethutils"
+	"github.com/superbch/superbch/internal/testutils"
+	"github.com/superbch/superbch/staking"
+	"github.com/superbch/superbch/staking/types"
 )
 
 // testdata/sol/contracts/staking/XHedgeStorage.sol

@@ -5,7 +5,7 @@ import (
 
 	gethcmn "github.com/ethereum/go-ethereum/common"
 
-	"github.com/smartbch/smartbch/internal/ethutils"
+	"github.com/superbch/superbch/internal/ethutils"
 )
 
 var ABI = ethutils.MustParseABI(`

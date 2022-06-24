@@ -10,10 +10,10 @@ import (
 
 	"github.com/tendermint/tendermint/libs/log"
 
-	cctypes "github.com/smartbch/smartbch/crosschain/types"
-	"github.com/smartbch/smartbch/param"
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
-	"github.com/smartbch/smartbch/watcher/types"
+	cctypes "github.com/superbch/superbch/crosschain/types"
+	"github.com/superbch/superbch/param"
+	stakingtypes "github.com/superbch/superbch/staking/types"
+	"github.com/superbch/superbch/watcher/types"
 )
 
 const (
@@ -27,7 +27,7 @@ type Watcher struct {
 	logger log.Logger
 
 	rpcClient         types.RpcClient
-	smartBchRpcClient types.RpcClient
+	superBchRpcClient types.RpcClient
 
 	latestFinalizedHeight int64
 
@@ -57,7 +57,7 @@ func NewWatcher(logger log.Logger, lastHeight, lastCCEpochEndHeight int64, lastK
 		logger: logger,
 
 		rpcClient:         NewRpcClient(chainConfig.AppConfig.MainnetRPCUrl, chainConfig.AppConfig.MainnetRPCUsername, chainConfig.AppConfig.MainnetRPCPassword, "text/plain;", logger),
-		smartBchRpcClient: NewRpcClient(chainConfig.AppConfig.SmartBchRPCUrl, "", "", "application/json", logger),
+		superBchRpcClient: NewRpcClient(chainConfig.AppConfig.SuperBchRPCUrl, "", "", "application/json", logger),
 
 		lastEpochEndHeight:    lastHeight,
 		latestFinalizedHeight: lastHeight,
@@ -175,7 +175,7 @@ func (watcher *Watcher) epochSpeedup(latestFinalizedHeight, latestMainnetHeight 
 				watcher.ccEpochSpeedup()
 				break
 			}
-			epochs := watcher.smartBchRpcClient.GetEpochs(start, start+100)
+			epochs := watcher.superBchRpcClient.GetEpochs(start, start+100)
 			if len(epochs) == 0 {
 				watcher.ccEpochSpeedup()
 				break
@@ -206,7 +206,7 @@ func (watcher *Watcher) ccEpochSpeedup() {
 	}
 	start := uint64(watcher.lastKnownCCEpochNum) + 1
 	for {
-		epochs := watcher.smartBchRpcClient.GetCCEpochs(start, start+100)
+		epochs := watcher.superBchRpcClient.GetCCEpochs(start, start+100)
 		if len(epochs) == 0 {
 			break
 		}

@@ -10,12 +10,12 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	gethrpc "github.com/ethereum/go-ethereum/rpc"
 
-	mdbtypes "github.com/smartbch/moeingdb/types"
-	"github.com/smartbch/moeingevm/ebp"
-	motypes "github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/api"
-	"github.com/smartbch/smartbch/internal/testutils"
-	rpctypes "github.com/smartbch/smartbch/rpc/internal/ethapi"
+	mdbtypes "github.com/superbch/moeingdb/types"
+	"github.com/superbch/moeingevm/ebp"
+	motypes "github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/api"
+	"github.com/superbch/superbch/internal/testutils"
+	rpctypes "github.com/superbch/superbch/rpc/internal/ethapi"
 )
 
 func TestQueryTxBySrcDstAddr(t *testing.T) {

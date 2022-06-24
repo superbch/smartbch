@@ -22,9 +22,9 @@ import (
 	tmrpcserver "github.com/tendermint/tendermint/rpc/jsonrpc/server"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/smartbch/smartbch/api"
-	"github.com/smartbch/smartbch/app"
-	"github.com/smartbch/smartbch/rpc"
+	"github.com/superbch/superbch/api"
+	"github.com/superbch/superbch/app"
+	"github.com/superbch/superbch/rpc"
 )
 
 const (
@@ -47,7 +47,7 @@ const (
 	flagMainnetUrl             = "mainnet-rpc-url"
 	flagMainnetRpcUser         = "mainnet-rpc-username"
 	flagMainnetRpcPassword     = "mainnet-rpc-password"
-	flagSmartBchUrl            = "smartbch-url"
+	flagSuperBchUrl            = "superbch-url"
 	flagWatcherSpeedup         = "watcher-speedup"
 	flagRpcOnly                = "rpc-only"
 	flagArchiveMode            = "archive-mode"
@@ -61,7 +61,7 @@ func StartCmd(ctx *Context, appCreator AppCreator) *cobra.Command {
 		Short: "Run the full node",
 
 		RunE: func(cmd *cobra.Command, args []string) error {
-			ctx.Logger.Info("starting SmartBCH Chain with Tendermint")
+			ctx.Logger.Info("starting SuperBCH Chain with Tendermint")
 			_, err := startInProcess(ctx, appCreator)
 			return err
 		},
@@ -92,7 +92,7 @@ func StartCmd(ctx *Context, appCreator AppCreator) *cobra.Command {
 	cmd.Flags().String(flagMainnetUrl, "tcp://:8432", "BCH Mainnet RPC URL")
 	cmd.Flags().String(flagMainnetRpcUser, "user", "BCH Mainnet RPC user name")
 	cmd.Flags().String(flagMainnetRpcPassword, "88888888", "BCH Mainnet RPC user password")
-	cmd.Flags().String(flagSmartBchUrl, "tcp://:8545", "SmartBch RPC URL")
+	cmd.Flags().String(flagSuperBchUrl, "tcp://:8545", "SuperBch RPC URL")
 	cmd.Flags().Bool(flagWatcherSpeedup, false, "Watcher Speedup")
 	cmd.Flags().Bool(flagRpcOnly, false, "Start RPC server even tmnode is not started correctly, only useful for debug purpose")
 	cmd.Flags().String(flagRpcAPI, "eth,web3,net,txpool,sbch,tm", "API's offered over the HTTP-RPC interface")

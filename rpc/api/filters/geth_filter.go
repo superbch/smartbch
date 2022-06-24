@@ -26,8 +26,8 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/rpc"
 
-	motypes "github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/api"
+	motypes "github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/api"
 )
 
 type Backend = api.FilterService

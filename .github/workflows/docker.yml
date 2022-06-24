@@ -31,7 +31,7 @@ jobs:
       - name: Login to docker hub
         uses: docker/login-action@v1.6.0
         with:
-          username: smartbch
+          username: superbch
           password: ${{secrets.DOCKERHUB_PASSWORD}}
 
       # If you want support for more platforms you can use our setup-qemu action:
@@ -48,7 +48,7 @@ jobs:
           echo $GIT_TAG
           docker buildx build --push \
           -f Dockerfile.optimized \
-          -t smartbch/smartbchd:$GIT_TAG \
+          -t superbch/superbchd:$GIT_TAG \
           --platform linux/arm64,linux/amd64 .
 
       - name: Build testnet image
@@ -59,8 +59,8 @@ jobs:
           docker buildx build --push \
           --progress plain \
           -f Dockerfile.optimized \
-          -t smartbch/smartbchd:"$GIT_TAG"-amber \
-          --build-arg SMARTBCH_BUILD_TAGS='cppbtree,params_amber' \
+          -t superbch/superbchd:"$GIT_TAG"-amber \
+          --build-arg SUPERBCH_BUILD_TAGS='cppbtree,params_amber' \
           --build-arg CONFIG_VERSION=v0.0.5 \
           --build-arg CHAIN_ID=0x2711  \
           --platform linux/arm64,linux/amd64 .

@@ -1,4 +1,4 @@
-rm -rf ~/.smartbchd
-./build/smartbchd init bull --chain-id=smartbch-2
-./build/smartbchd start
+rm -rf ~/.superbchd
+./build/superbchd init bull --chain-id=superbch-2
+./build/superbchd start
 

@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  smartbch:
+  superbch:
     build: .
     command: start --skip-sanity-check=true
     ports:
       - "8545:8545"
     restart: always
     volumes:
-      - smartbch_data:/root/.smartbchd
+      - superbch_data:/root/.superbchd
 volumes:
-    smartbch_data:
+    superbch_data:

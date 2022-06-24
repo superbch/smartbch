@@ -19,10 +19,10 @@ import (
 	"github.com/tendermint/tendermint/privval"
 	"github.com/tendermint/tendermint/types"
 
-	"github.com/smartbch/smartbch/app"
-	"github.com/smartbch/smartbch/internal/bigutils"
-	"github.com/smartbch/smartbch/internal/ethutils"
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
+	"github.com/superbch/superbch/app"
+	"github.com/superbch/superbch/internal/bigutils"
+	"github.com/superbch/superbch/internal/ethutils"
+	stakingtypes "github.com/superbch/superbch/staking/types"
 )
 
 const (
@@ -44,7 +44,7 @@ func GenerateConsensusKeyInfoCmd(ctx *Context) *cobra.Command {
 		Short: "Generate and print genesis validator consensus key info",
 		Args:  cobra.ExactArgs(0),
 		Example: `
-smartbchd generate-consensus-key-info
+superbchd generate-consensus-key-info
 `,
 		RunE: func(_ *cobra.Command, args []string) error {
 			c := ctx.Config
@@ -76,7 +76,7 @@ func GenerateGenesisValidatorCmd(ctx *Context) *cobra.Command {
 		Use:   "generate-genesis-validator",
 		Short: "Generate and print genesis validator info",
 		Example: `
-smartbchd generate-genesis-validator 
+superbchd generate-genesis-validator 
 --validator-address= 
 --consensus-pubkey= 
 --voting-power= 

@@ -17,9 +17,9 @@ import (
 	"github.com/tendermint/tendermint/libs/cli"
 	"github.com/tendermint/tendermint/types"
 
-	"github.com/smartbch/smartbch/app"
-	"github.com/smartbch/smartbch/internal/bigutils"
-	"github.com/smartbch/smartbch/internal/testutils"
+	"github.com/superbch/superbch/app"
+	"github.com/superbch/superbch/internal/bigutils"
+	"github.com/superbch/superbch/internal/testutils"
 )
 
 const (

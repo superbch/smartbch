@@ -12,8 +12,8 @@ import (
 	gethrpc "github.com/ethereum/go-ethereum/rpc"
 	"github.com/rs/cors"
 
-	"github.com/smartbch/smartbch/api"
-	rpcapi "github.com/smartbch/smartbch/rpc/api"
+	"github.com/superbch/superbch/api"
+	rpcapi "github.com/superbch/superbch/rpc/api"
 )
 
 var _ tmservice.Service = (*Server)(nil)

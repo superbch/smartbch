@@ -18,10 +18,10 @@ import (
 	"github.com/tendermint/tendermint/crypto/ed25519"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/smartbch/moeingevm/ebp"
-	mevmtypes "github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/param"
-	"github.com/smartbch/smartbch/staking/types"
+	"github.com/superbch/moeingevm/ebp"
+	mevmtypes "github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/param"
+	"github.com/superbch/superbch/staking/types"
 )
 
 const (

@@ -8,14 +8,14 @@ import (
 	"github.com/tendermint/tendermint/libs/cli"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/smartbch/smartbch/app"
-	"github.com/smartbch/smartbch/param"
+	"github.com/superbch/superbch/app"
+	"github.com/superbch/superbch/param"
 )
 
 type AppCreator func(logger log.Logger, chainId *uint256.Int, config *param.ChainConfig) abci.Application
 
 func main() {
-	rootCmd := createSmartbchdCmd()
+	rootCmd := createSuperbchdCmd()
 	executor := cli.PrepareBaseCmd(rootCmd, "GA", DefaultNodeHome)
 	err := executor.Execute()
 	if err != nil {
@@ -24,12 +24,12 @@ func main() {
 	}
 }
 
-func createSmartbchdCmd() *cobra.Command {
+func createSuperbchdCmd() *cobra.Command {
 	cobra.EnableCommandSorting = false
 	ctx := NewDefaultContext()
 	rootCmd := &cobra.Command{
-		Use:               "smartbchd",
-		Short:             "SmartBCH Chain Daemon (server)",
+		Use:               "superbchd",
+		Short:             "SuperBCH Chain Daemon (server)",
 		PersistentPreRunE: PersistentPreRunEFn(ctx),
 	}
 	addInitCommands(ctx, rootCmd)

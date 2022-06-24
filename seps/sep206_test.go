@@ -10,8 +10,8 @@ import (
 
 	gethcmn "github.com/ethereum/go-ethereum/common"
 	gethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/smartbch/smartbch/internal/testutils"
-	"github.com/smartbch/smartbch/seps"
+	"github.com/superbch/superbch/internal/testutils"
+	"github.com/superbch/superbch/seps"
 )
 
 var (

@@ -5,11 +5,11 @@ import (
 
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/smartbch/smartbch/param"
+	"github.com/superbch/superbch/param"
 )
 
 var (
-	DefaultNodeHome = os.ExpandEnv("$HOME/.smartbchd")
+	DefaultNodeHome = os.ExpandEnv("$HOME/.superbchd")
 )
 
 type Context struct {

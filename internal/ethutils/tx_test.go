@@ -11,8 +11,8 @@ import (
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/rlp"
 
-	"github.com/smartbch/smartbch/internal/ethutils"
-	"github.com/smartbch/smartbch/internal/testutils"
+	"github.com/superbch/superbch/internal/ethutils"
+	"github.com/superbch/superbch/internal/testutils"
 )
 
 func TestTxSig(t *testing.T) {

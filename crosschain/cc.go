@@ -14,10 +14,10 @@ import (
 	"github.com/tendermint/tendermint/crypto/secp256k1"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/smartbch/moeingevm/ebp"
-	mevmtypes "github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/crosschain/types"
-	"github.com/smartbch/smartbch/param"
+	"github.com/superbch/moeingevm/ebp"
+	mevmtypes "github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/crosschain/types"
+	"github.com/superbch/superbch/param"
 )
 
 const (

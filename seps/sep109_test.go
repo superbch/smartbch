@@ -11,7 +11,7 @@ import (
 	"github.com/vechain/go-ecvrf"
 
 	gethcmn "github.com/ethereum/go-ethereum/common"
-	"github.com/smartbch/smartbch/internal/testutils"
+	"github.com/superbch/superbch/internal/testutils"
 )
 
 var (

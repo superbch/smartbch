@@ -4,7 +4,7 @@ import (
 	"github.com/holiman/uint256"
 
 	gethcmn "github.com/ethereum/go-ethereum/common"
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
+	stakingtypes "github.com/superbch/superbch/staking/types"
 )
 
 type ValidatorsInfo struct {

@@ -1,4 +1,4 @@
-module github.com/smartbch/smartbch
+module github.com/superbch/superbch
 
 go 1.18
 
@@ -23,9 +23,9 @@ require (
 	github.com/prometheus/common v0.21.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
 	github.com/rs/cors v1.7.0
-	github.com/smartbch/moeingads v0.4.2
-	github.com/smartbch/moeingdb v0.4.3-0.20220413025317-486bb0cd91a0
-	github.com/smartbch/moeingevm v0.4.2-0.20220428082003-4c26f4ce64ed
+	github.com/superbch/moeingads v0.4.2
+	github.com/superbch/moeingdb v0.4.3-0.20220413025317-486bb0cd91a0
+	github.com/superbch/moeingevm v0.4.2-0.20220428082003-4c26f4ce64ed
 	github.com/spf13/afero v1.6.0 // indirect
 	github.com/spf13/cast v1.3.1 // indirect
 	github.com/spf13/cobra v1.1.3

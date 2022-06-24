@@ -2,7 +2,7 @@ package staking
 
 import (
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/smartbch/moeingevm/types"
+	"github.com/superbch/moeingevm/types"
 	"testing"
 
 	"github.com/stretchr/testify/require"

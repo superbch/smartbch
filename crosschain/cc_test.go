@@ -9,10 +9,10 @@ import (
 	"github.com/holiman/uint256"
 	"github.com/stretchr/testify/require"
 
-	"github.com/smartbch/moeingevm/ebp"
-	"github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/crosschain"
-	"github.com/smartbch/smartbch/internal/testutils"
+	"github.com/superbch/moeingevm/ebp"
+	"github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/crosschain"
+	"github.com/superbch/superbch/internal/testutils"
 )
 
 func TestCC(t *testing.T) {

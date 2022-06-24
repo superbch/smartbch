@@ -14,13 +14,13 @@ import (
 	"github.com/ethereum/go-ethereum/event"
 	"github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/app"
-	"github.com/smartbch/smartbch/crosschain"
-	cctypes "github.com/smartbch/smartbch/crosschain/types"
-	"github.com/smartbch/smartbch/param"
-	"github.com/smartbch/smartbch/staking"
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
+	"github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/app"
+	"github.com/superbch/superbch/crosschain"
+	cctypes "github.com/superbch/superbch/crosschain/types"
+	"github.com/superbch/superbch/param"
+	"github.com/superbch/superbch/staking"
+	stakingtypes "github.com/superbch/superbch/staking/types"
 )
 
 var _ BackendService = &apiBackend{}

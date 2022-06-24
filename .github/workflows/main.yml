@@ -58,15 +58,15 @@ jobs:
           go-version: ${{ matrix.go }}
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout smartBCH
+      - name: Checkout superBCH
         uses: actions/checkout@v2
         with:
-          path: smartbch
+          path: superbch
 
       - name: Checkout moeingevm
         uses: actions/checkout@v2
         with:
-          repository: smartbch/moeingevm
+          repository: superbch/moeingevm
           path: moeingevm
 
       - name: Build evmwrap
@@ -81,12 +81,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-go-
 
-      - name: Build & Test smartBCH
+      - name: Build & Test superBCH
         run: |
           export ROCKSDB_PATH="$PWD/rocksdb-5.18.4"
           export CGO_CFLAGS="-I$ROCKSDB_PATH/include"
           export CGO_LDFLAGS="-L$ROCKSDB_PATH -L$PWD/moeingevm/evmwrap/host_bridge/ -lrocksdb -lstdc++ -lm -lz -lbz2 -lsnappy -llz4 -lzstd"
-          cd smartbch
+          cd superbch
           go version
           go build ./...
           go test -tags params_testnet -coverprofile=coverage.out -covermode=atomic -p 1 ./...

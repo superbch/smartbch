@@ -12,12 +12,12 @@ import (
 	gethrpc "github.com/ethereum/go-ethereum/rpc"
 	"github.com/tendermint/tendermint/libs/log"
 
-	motypes "github.com/smartbch/moeingevm/types"
-	sbchapi "github.com/smartbch/smartbch/api"
-	cctypes "github.com/smartbch/smartbch/crosschain/types"
-	rpctypes "github.com/smartbch/smartbch/rpc/internal/ethapi"
-	"github.com/smartbch/smartbch/staking"
-	"github.com/smartbch/smartbch/staking/types"
+	motypes "github.com/superbch/moeingevm/types"
+	sbchapi "github.com/superbch/superbch/api"
+	cctypes "github.com/superbch/superbch/crosschain/types"
+	rpctypes "github.com/superbch/superbch/rpc/internal/ethapi"
+	"github.com/superbch/superbch/staking"
+	"github.com/superbch/superbch/staking/types"
 )
 
 var _ SbchAPI = (*sbchAPI)(nil)

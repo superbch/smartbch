@@ -12,10 +12,10 @@ import (
 	abcitypes "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/smartbch/moeingevm/evmwrap/testcase"
-	"github.com/smartbch/moeingevm/types"
-	"github.com/smartbch/smartbch/internal/ethutils"
-	"github.com/smartbch/smartbch/param"
+	"github.com/superbch/moeingevm/evmwrap/testcase"
+	"github.com/superbch/moeingevm/types"
+	"github.com/superbch/superbch/internal/ethutils"
+	"github.com/superbch/superbch/param"
 )
 
 var p *param.ChainConfig

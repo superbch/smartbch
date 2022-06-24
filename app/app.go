@@ -27,20 +27,20 @@ import (
 	cryptoenc "github.com/tendermint/tendermint/crypto/encoding"
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/smartbch/moeingads"
-	"github.com/smartbch/moeingads/store"
-	"github.com/smartbch/moeingads/store/rabbit"
-	"github.com/smartbch/moeingdb/modb"
-	"github.com/smartbch/moeingdb/syncdb"
-	modbtypes "github.com/smartbch/moeingdb/types"
-	"github.com/smartbch/moeingevm/ebp"
-	"github.com/smartbch/moeingevm/types"
+	"github.com/superbch/moeingads"
+	"github.com/superbch/moeingads/store"
+	"github.com/superbch/moeingads/store/rabbit"
+	"github.com/superbch/moeingdb/modb"
+	"github.com/superbch/moeingdb/syncdb"
+	modbtypes "github.com/superbch/moeingdb/types"
+	"github.com/superbch/moeingevm/ebp"
+	"github.com/superbch/moeingevm/types"
 
-	"github.com/smartbch/smartbch/internal/ethutils"
-	"github.com/smartbch/smartbch/param"
-	"github.com/smartbch/smartbch/staking"
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
-	"github.com/smartbch/smartbch/watcher"
+	"github.com/superbch/superbch/internal/ethutils"
+	"github.com/superbch/superbch/param"
+	"github.com/superbch/superbch/staking"
+	stakingtypes "github.com/superbch/superbch/staking/types"
+	"github.com/superbch/superbch/watcher"
 )
 
 var (
@@ -951,7 +951,7 @@ func (app *App) GetBlockForSync(height int64) (blk []byte, err error) {
 }
 
 //nolint
-// for ((i=10; i<80000; i+=50)); do RANDPANICHEIGHT=$i ./smartbchd start; done | tee a.log
+// for ((i=10; i<80000; i+=50)); do RANDPANICHEIGHT=$i ./superbchd start; done | tee a.log
 func (app *App) randomPanic(baseNumber, primeNumber int64) { // breaks normal function, only used in test
 	heightStr := os.Getenv("RANDPANICHEIGHT")
 	if len(heightStr) == 0 {

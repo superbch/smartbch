@@ -50,7 +50,7 @@ type AppConfig struct {
 	MainnetRPCUrl      string `mapstructure:"mainnet-rpc-url"`
 	MainnetRPCUsername string `mapstructure:"mainnet-rpc-username"`
 	MainnetRPCPassword string `mapstructure:"mainnet-rpc-password"`
-	SmartBchRPCUrl     string `mapstructure:"smartbch-rpc-url"`
+	SuperBchRPCUrl     string `mapstructure:"superbch-rpc-url"`
 	Speedup            bool   `mapstructure:"watcher-speedup"`
 
 	FrontierGasLimit uint64 `mapstructure:"frontier-gaslimit"`
@@ -66,7 +66,7 @@ type ChainConfig struct {
 }
 
 var (
-	defaultHome = os.ExpandEnv("$HOME/.smartbchd")
+	defaultHome = os.ExpandEnv("$HOME/.superbchd")
 )
 
 func DefaultAppConfig() *AppConfig {

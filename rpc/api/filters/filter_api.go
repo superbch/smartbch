@@ -13,8 +13,8 @@ import (
 	"github.com/ethereum/go-ethereum/rpc"
 	"github.com/tendermint/tendermint/libs/log"
 
-	motypes "github.com/smartbch/moeingevm/types"
-	mapi "github.com/smartbch/smartbch/api"
+	motypes "github.com/superbch/moeingevm/types"
+	mapi "github.com/superbch/superbch/api"
 )
 
 var _ PublicFilterAPI = (*filterAPI)(nil)

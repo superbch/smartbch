@@ -9,10 +9,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/log"
 
-	cctypes "github.com/smartbch/smartbch/crosschain/types"
-	"github.com/smartbch/smartbch/param"
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
-	"github.com/smartbch/smartbch/watcher/types"
+	cctypes "github.com/superbch/superbch/crosschain/types"
+	"github.com/superbch/superbch/param"
+	stakingtypes "github.com/superbch/superbch/staking/types"
+	"github.com/superbch/superbch/watcher/types"
 )
 
 type MockBCHNode struct {

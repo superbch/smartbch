@@ -6,7 +6,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/smartbch/smartbch/internal/testutils"
+	"github.com/superbch/superbch/internal/testutils"
 )
 
 const (

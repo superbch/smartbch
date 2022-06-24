@@ -6,7 +6,7 @@ import (
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/crypto/ed25519"
 
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
+	stakingtypes "github.com/superbch/superbch/staking/types"
 )
 
 type Validator struct {

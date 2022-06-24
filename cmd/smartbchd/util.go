@@ -21,7 +21,7 @@ import (
 	"github.com/tendermint/tendermint/privval"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/smartbch/smartbch/param"
+	"github.com/superbch/superbch/param"
 )
 
 func FileExists(filePath string) bool {

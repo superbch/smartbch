@@ -73,7 +73,7 @@
     * sbch_getTxListByHeightWithRange
   * Add several methods in debug namespace
 * Command
-  * Add options to `smartbchd start` command
+  * Add options to `superbchd start` command
     * `--http.api`, `--ws.api`
     * `--archive-mode`
     * `--skip-sanity-check`
@@ -105,8 +105,8 @@
   * Fixed eth_gasPrice
   * Fixed transaction's V,R,S (issue#25)
 * Command
-  * `smartbchd start` will not ignore `--home` option
-  * `smartbchd start` can disable HTTPS-RPC and WSS-RPC server now
+  * `superbchd start` will not ignore `--home` option
+  * `superbchd start` can disable HTTPS-RPC and WSS-RPC server now
 * Library
   * Upgrade moeingdb to v0.3.3
   * Upgrade moeingevm to v0.3.2
@@ -115,8 +115,8 @@
 ## v0.3.3
 
 * Command
-  * Add `--rpc-only` option to `smartbchd start` command
-  * Fix a bug and improve `smartbchd staking` command
+  * Add `--rpc-only` option to `superbchd start` command
+  * Fix a bug and improve `superbchd staking` command
 * Staking
   * Fixed getrawtransaction rpc call (PR#21)
 
@@ -133,7 +133,7 @@
 ## v0.3.0
 
 * Command
-  * Add `smartbchd version` command
+  * Add `superbchd version` command
 * JSON-RPC
   * Improve web3_clientVersion
   * Ignore the height argument and always return latest status
@@ -153,7 +153,7 @@
   * Add sbch_getEpochs
   * Fix bugs of several endpoints
 * Command
-  * Improve `smartbchd staking` command
+  * Improve `superbchd staking` command
 * Consensus
   * Continue to enhance multi-validator support
   * Integrate with BCHN special testnode
@@ -204,7 +204,7 @@
     * allow `startHeight` to be greater than `endHeight`
     * add `limit` param
 
-    please refer to  [JSON-RPC docs](https://github.com/smartbch/docs/blob/main/deverlopers-guide/jsonrpc.md#sbch_queryTxBySrc) for more detailed change
+    please refer to  [JSON-RPC docs](https://github.com/superbch/docs/blob/main/deverlopers-guide/jsonrpc.md#sbch_queryTxBySrc) for more detailed change
 
 * Add config option to support lite history DB
 

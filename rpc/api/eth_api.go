@@ -16,12 +16,12 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	tmrpc "github.com/tendermint/tendermint/rpc/core"
 
-	"github.com/smartbch/moeingevm/ebp"
-	"github.com/smartbch/moeingevm/types"
-	sbchapi "github.com/smartbch/smartbch/api"
-	"github.com/smartbch/smartbch/internal/ethutils"
-	rpctypes "github.com/smartbch/smartbch/rpc/internal/ethapi"
-	"github.com/smartbch/smartbch/staking"
+	"github.com/superbch/moeingevm/ebp"
+	"github.com/superbch/moeingevm/types"
+	sbchapi "github.com/superbch/superbch/api"
+	"github.com/superbch/superbch/internal/ethutils"
+	rpctypes "github.com/superbch/superbch/rpc/internal/ethapi"
+	"github.com/superbch/superbch/staking"
 )
 
 const (
@@ -31,7 +31,7 @@ const (
 	DefaultRPCGasLimit = 10000000
 )
 
-// smartBCH genesis height is 1, so we need this to make it compatible with Ethereum
+// superBCH genesis height is 1, so we need this to make it compatible with Ethereum
 var fakeBlock0 = &types.Block{
 	Timestamp: 1627574400, // 2021-07-30
 	ParentHash: [32]byte{

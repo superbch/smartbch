@@ -4,12 +4,12 @@ import (
 	gethcmn "github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/holiman/uint256"
-	"github.com/smartbch/moeingevm/ebp"
+	"github.com/superbch/moeingevm/ebp"
 
-	motypes "github.com/smartbch/moeingevm/types"
-	sbchapi "github.com/smartbch/smartbch/api"
-	cctypes "github.com/smartbch/smartbch/crosschain/types"
-	stakingtypes "github.com/smartbch/smartbch/staking/types"
+	motypes "github.com/superbch/moeingevm/types"
+	sbchapi "github.com/superbch/superbch/api"
+	cctypes "github.com/superbch/superbch/crosschain/types"
+	stakingtypes "github.com/superbch/superbch/staking/types"
 )
 
 // StakingEpoch
